@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSR Structure Masters | Quality Workmanship. Modern Designs.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#facc15',
+                            500: '#d4af37',
+                            600: '#ca8a04',
+                            700: '#a16207'
+                        },
+                        dark: {
+                            900: '#0f0f11',
+                            800: '#18181b',
+                            700: '#27272a',
+                            600: '#3f3f46'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f11;
+            color: #f9fafb;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #d4af37 50%, #ca8a04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+        }
+        .gold-border-glow:hover {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-900/90 backdrop-blur-md border-b border-dark-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Business Branding -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center font-bold text-black text-xl shadow-lg group-hover:scale-105 transition-transform">
+                        SSR
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-gold-400 transition-colors">
+                            SSR STRUCTURE MASTERS
+                        </span>
+                        <span class="text-xs text-gray-400 tracking-widest uppercase">Mthatha & Eastern Cape</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#home" class="text-gray-300 hover:text-gold-400 transition-colors">Home</a>
+                    <a href="#services" class="text-gray-300 hover:text-gold-400 transition-colors">Our Services</a>
+                    <a href="#projects" class="text-gray-300 hover:text-gold-400 transition-colors">Our Projects</a>
+                    <a href="#quotation" class="text-gray-300 hover:text-gold-400 transition-colors">Request a Quotation</a>
+                    <a href="#contact" class="text-gray-300 hover:text-gold-400 transition-colors">Contact Us</a>
+                </nav>
+
+                <!-- Desktop Direct WhatsApp Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/27792851517?text=Hello%20SSR%20Structure%20Masters%2C%20I%20would%20like%20to%20request%20a%20quotation." 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-all shadow-md hover:shadow-emerald-900/30">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>WhatsApp Us</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation Toggle Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2.5 rounded-lg text-gray-300 hover:text-white hover:bg-dark-800 focus:outline-none">
+                        <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-700 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-dark-700">Home</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-dark-700">Our Services</a>
+            <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-dark-700">Our Projects</a>
+            <a href="#quotation" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-dark-700">Request a Quotation</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-gold-400 hover:bg-dark-700">Contact Us</a>
+            <div class="pt-2">
+                <a href="https://wa.me/27792851517?text=Hello%20SSR%20Structure%20Masters%2C%20I%20would%20like%20to%20request%20a%20quotation." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="flex items-center justify-center space-x-2 w-full bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-lg text-center font-semibold">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp Quote (079 285 1517)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero / Home Section -->
+        <section id="home" class="relative min-h-[85vh] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900 overflow-hidden">
+            <!-- Background Decorative Lighting Glow -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gold-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-dark-700/60 border border-gold-500/30 text-gold-400 text-xs sm:text-sm font-medium mb-8">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Based in Mthatha | Serving Anywhere in Eastern Cape</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Quality Workmanship.<br />
+                    <span class="gold-gradient-text">Modern Designs.</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10">
+                    SSR Structure Masters specialises in modern ceilings, modern TV stands, and tiling. We focus on quality workmanship, neat finishes, and creating beautiful spaces.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://wa.me/27792851517?text=Hello%20SSR%20Structure%20Masters%2C%20I%20would%20like%20to%20request%20a%20quotation."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-bold text-lg px-8 py-4 rounded-xl shadow-xl hover:shadow-gold-500/20 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Request a Quotation</span>
+                    </a>
+                    
+                    <a href="#projects" 
+                       class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-dark-800 hover:bg-dark-700 text-gray-200 border border-dark-600 font-semibold text-lg px-8 py-4 rounded-xl transition-all">
+                        <span>View Our Projects</span>
+                        <i class="fa-solid fa-arrow-down text-sm text-gold-400"></i>
+                    </a>
+                </div>
+
+                <!-- Feature Highlights Bar -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16 pt-12 border-t border-dark-700/80 text-left">
+                    <div class="flex items-center space-x-4 p-4 rounded-xl bg-dark-800/40 border border-dark-700">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-square-check"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Neat Finishes</h4>
+                            <p class="text-xs text-gray-400">Attention to every detail</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 p-4 rounded-xl bg-dark-800/40 border border-dark-700">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-hammer"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Expert Craftsmanship</h4>
+                            <p class="text-xs text-gray-400">Durable, reliable work</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-4 p-4 rounded-xl bg-dark-800/40 border border-dark-700">
+                        <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Eastern Cape</h4>
+                            <p class="text-xs text-gray-400">Services across the province</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-900 border-t border-dark-800">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">What We Do</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Our Three Core Services</p>
+                    <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1: Modern Ceilings -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-dark-700 hover:border-gold-500/50 transition-all gold-border-glow flex flex-col justify-between group">
+                        <div>
+                            <div class="w-16 h-16 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-border-top-left"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-gold-400 transition-colors">1. Modern Ceilings</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                Modern ceiling designs with neat finishes and quality workmanship.
+                            </p>
+                        </div>
+                        <a href="#projects" onclick="filterProjects('ceilings')" class="inline-flex items-center space-x-2 text-gold-400 font-semibold text-sm hover:text-gold-300">
+                            <span>View Ceiling Projects</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2: Modern TV Stands -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-dark-700 hover:border-gold-500/50 transition-all gold-border-glow flex flex-col justify-between group">
+                        <div>
+                            <div class="w-16 h-16 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-tv"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-gold-400 transition-colors">2. Modern TV Stands</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                Stylish, modern TV stand designs that improve the look of a living space.
+                            </p>
+                        </div>
+                        <a href="#projects" onclick="filterProjects('tvstands')" class="inline-flex items-center space-x-2 text-gold-400 font-semibold text-sm hover:text-gold-300">
+                            <span>View TV Stand Projects</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3: Tiling -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-dark-700 hover:border-gold-500/50 transition-all gold-border-glow flex flex-col justify-between group">
+                        <div>
+                            <div class="w-16 h-16 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-grip"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-gold-400 transition-colors">3. Tiling</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                Neat, professional tiling for beautiful floors and spaces.
+                            </p>
+                        </div>
+                        <a href="#projects" onclick="filterProjects('tiling')" class="inline-flex items-center space-x-2 text-gold-400 font-semibold text-sm hover:text-gold-300">
+                            <span>View Tiling Projects</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Projects Section -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-800 border-t border-dark-700">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">Portfolio</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Our Real Work Projects</p>
+                    <p class="text-gray-400 mt-2 text-sm">Browse photos of recent projects completed by SSR Structure Masters.</p>
+                    <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+                    <button onclick="filterProjects('all')" id="btn-all" class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-gold-500 text-black shadow-md">
+                        All Projects
+                    </button>
+                    <button onclick="filterProjects('ceilings')" id="btn-ceilings" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-dark-700 text-gray-300 hover:bg-dark-600">
+                        Modern Ceilings
+                    </button>
+                    <button onclick="filterProjects('tvstands')" id="btn-tvstands" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-dark-700 text-gray-300 hover:bg-dark-600">
+                        Modern TV Stands
+                    </button>
+                    <button onclick="filterProjects('tiling')" id="btn-tiling" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all bg-dark-700 text-gray-300 hover:bg-dark-600">
+                        Tiling
+                    </button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                    
+                    <!-- Ceiling Projects -->
+                    <div class="project-item ceilings bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('photo-output_bad6ba.jpg', 'Modern Ceiling Design with Blue LED Accent Lighting')">
+                            <img src="photo-output_bad6ba.jpg" alt="Modern Ceiling Design by SSR Structure Masters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Modern Ceiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Custom Ceilings with LED Feature</h4>
+                        </div>
+                    </div>
+
+                    <div class="project-item ceilings bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('photo-output_bad6ba_2.jpg', 'Architectural Modern Ceiling Finish')">
+                            <img src="photo-output_bad6ba_2.jpg" alt="Modern Ceiling Finish Mthatha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Modern Ceiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Layered Ceiling Architecture</h4>
+                        </div>
+                    </div>
+
+                    <div class="project-item ceilings bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('photo-output_bad6ba_3.jpg', 'Circular Ceiling Accent with Recessed Lights')">
+                            <img src="photo-output_bad6ba_3.jpg" alt="Circular Ceiling Accent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Modern Ceiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Circular Centerpiece Design</h4>
+                        </div>
+                    </div>
+
+                    <div class="project-item ceilings bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('IMG_1995_bad6ba.jpg', 'Precision Ceiling Framing Workmanship')">
+                            <img src="IMG_1995_bad6ba.jpg" alt="Precision Ceiling Construction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Modern Ceiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Precision Finished Ceilings</h4>
+                        </div>
+                    </div>
+
+                    <div class="project-item ceilings bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('photo-output_bad6ba_4.jpg', 'Warm Backlit Ceiling Design')">
+                            <img src="photo-output_bad6ba_4.jpg" alt="Backlit Ceiling Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Modern Ceiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Perimeter Glow Ceiling</h4>
+                        </div>
+                    </div>
+
+                    <div class="project-item ceilings bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('IMG_1321_bad6ba.jpg', 'Geometric Modern Ceiling Structure')">
+                            <img src="IMG_1321_bad6ba.jpg" alt="Geometric Modern Ceiling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Modern Ceiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Multi-Tier Ceiling Structure</h4>
+                        </div>
+                    </div>
+
+                    <!-- TV Stand Projects -->
+                    <div class="project-item tvstands bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all sm:col-span-2 lg:col-span-1">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('46F902B7-A40B-4A23-A99D-EA38303C5861_bad6ba.png', 'Modern Wall-Mounted TV Feature Panel with LED Accent')">
+                            <img src="46F902B7-A40B-4A23-A99D-EA38303C5861_bad6ba.png" alt="Modern TV Stand Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Modern TV Stand</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Feature Wall & Integrated TV Unit</h4>
+                        </div>
+                    </div>
+
+                    <!-- Tiling Projects -->
+                    <div class="project-item tiling bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('photo-output_bad6ba_5.jpg', 'Neat Porcelain Floor Tiling Work')">
+                            <img src="photo-output_bad6ba_5.jpg" alt="Porcelain Floor Tiling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Tiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">High-Gloss Porcelain Tiling</h4>
+                        </div>
+                    </div>
+
+                    <div class="project-item tiling bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('photo-output_bad6ba_6.jpg', 'Spacious Living Room Tiling Installation')">
+                            <img src="photo-output_bad6ba_6.jpg" alt="Precision Floor Tiling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Tiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Complete Floor Alignment Tiling</h4>
+                        </div>
+                    </div>
+
+                    <div class="project-item tiling bg-dark-900 rounded-xl overflow-hidden border border-dark-700 group hover:border-gold-500/50 transition-all">
+                        <div class="relative overflow-hidden aspect-[4/3] cursor-pointer" onclick="openLightbox('photo-output_bad6ba_7.jpg', 'Precision Tile Installation & Skirting')">
+                            <img src="photo-output_bad6ba_7.jpg" alt="Neat Room Tiling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                                <span class="text-xs font-semibold text-gold-400"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Tap to View</span>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <span class="text-xs font-bold uppercase text-gold-400 tracking-wider">Tiling</span>
+                            <h4 class="font-semibold text-white text-base mt-1">Clean Finish Floor Tiling</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Request a Quotation Section -->
+        <section id="quotation" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-dark-900 to-dark-800 border-t border-dark-700">
+            <div class="max-w-4xl mx-auto bg-dark-800/90 border border-gold-500/40 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden text-center gold-border-glow">
+                
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-3xl mb-6">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+                    Request a Custom Quotation
+                </h2>
+
+                <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-8">
+                    Every property and project is unique. Contact us today via WhatsApp to discuss your ceiling, TV stand, or tiling project and get an tailored quotation.
+                </p>
+
+                <div class="inline-block w-full sm:w-auto">
+                    <a href="https://wa.me/27792851517?text=Hello%20SSR%20Structure%20Masters%2C%20I%20would%20like%20to%20request%20a%20quotation."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Request a Quotation on WhatsApp</span>
+                    </a>
+                </div>
+
+                <p class="text-xs text-gray-400 mt-6">
+                    <i class="fa-solid fa-phone text-gold-400 mr-1"></i> Direct Call/WhatsApp: <strong class="text-white">079 285 1517</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-dark-900 border-t border-dark-700">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gold-400 mb-3">Get In Touch</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-white">Contact Us</p>
+                    <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Contact Details Card -->
+                    <div class="space-y-6">
+                        <div class="bg-dark-800 rounded-2xl p-8 border border-dark-700">
+                            <h3 class="text-2xl font-bold text-white mb-6">Business Information</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl flex-shrink-0 mt-1">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs uppercase tracking-wider text-gray-400 font-bold">Phone / WhatsApp</h4>
+                                        <a href="tel:0792851517" class="text-lg font-bold text-white hover:text-gold-400 transition-colors block mt-1">079 285 1517</a>
+                                        <a href="https://wa.me/27792851517?text=Hello%20SSR%20Structure%20Masters%2C%20I%20would%20like%20to%20request%20a%20quotation." 
+                                           target="_blank" rel="noopener noreferrer" class="text-sm text-emerald-400 hover:underline inline-flex items-center mt-1">
+                                            <i class="fa-brands fa-whatsapp mr-1"></i> Send WhatsApp Message
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl flex-shrink-0 mt-1">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs uppercase tracking-wider text-gray-400 font-bold">Location</h4>
+                                        <p class="text-lg font-semibold text-white mt-1">Mthatha, Eastern Cape</p>
+                                        <p class="text-sm text-gray-400">South Africa</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl flex-shrink-0 mt-1">
+                                        <i class="fa-solid fa-map-marked-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs uppercase tracking-wider text-gray-400 font-bold">Service Area</h4>
+                                        <p class="text-lg font-semibold text-white mt-1">Anywhere in the Eastern Cape Province</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Quick Inquiry Form -->
+                    <div class="bg-dark-800 rounded-2xl p-8 border border-dark-700">
+                        <h3 class="text-2xl font-bold text-white mb-2">Send a Direct Message</h3>
+                        <p class="text-sm text-gray-400 mb-6">Fill in your details below and we will automatically direct your inquiry to our WhatsApp line.</p>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label for="form-name" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Your Name</label>
+                                <input type="text" id="form-name" required placeholder="e.g. John Smith" 
+                                       class="w-full bg-dark-900 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 transition-colors">
+                            </div>
+
+                            <div>
+                                <label for="form-service" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Service Required</label>
+                                <select id="form-service" required class="w-full bg-dark-900 border border-dark-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-gold-500 transition-colors">
+                                    <option value="Modern Ceilings">Modern Ceilings</option>
+                                    <option value="Modern TV Stands">Modern TV Stands</option>
+                                    <option value="Tiling">Tiling</option>
+                                    <option value="Multiple Services">Multiple Services</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="form-location" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Your Town / Area</label>
+                                <input type="text" id="form-location" placeholder="e.g. Mthatha / East London / Gqeberha" 
+                                       class="w-full bg-dark-900 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 transition-colors">
+                            </div>
+
+                            <div>
+                                <label for="form-details" class="block text-xs font-bold uppercase tracking-wider text-gray-300 mb-2">Project Details</label>
+                                <textarea id="form-details" rows="3" placeholder="Briefly describe what you need done..." 
+                                          class="w-full bg-dark-900 border border-dark-600 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gold-500 transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center space-x-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Send via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-dark-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <span class="font-extrabold text-xl tracking-tight text-white">SSR STRUCTURE MASTERS</span>
+                <p class="text-xs text-gray-400 mt-1">Modern Ceilings • Modern TV Stands • Professional Tiling</p>
+            </div>
+            
+            <div class="text-sm text-gray-400">
+                &copy; <span id="current-year"></span> SSR Structure Masters. Mthatha, Eastern Cape.
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="https://wa.me/27792851517" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-emerald-400 hover:bg-emerald-600 hover:text-white transition-colors">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
+                <a href="tel:0792851517" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gold-400 hover:bg-gold-500 hover:text-black transition-colors">
+                    <i class="fa-solid fa-phone text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-md flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" aria-label="Close modal" class="absolute top-6 right-6 text-white text-3xl hover:text-gold-400 transition-colors z-10">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full text-center">
+            <img id="lightbox-img" src="" alt="Project Photo Full View" class="max-h-[80vh] mx-auto rounded-lg shadow-2xl object-contain">
+            <p id="lightbox-caption" class="text-gold-400 font-semibold text-lg mt-4"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close mobile menu when clicking any nav link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Gallery Filtering Functionality
+        function filterProjects(category) {
+            const items = document.querySelectorAll('.project-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Toggle active state on buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-gold-500', 'text-black');
+                btn.classList.add('bg-dark-700', 'text-gray-300');
+            });
+
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-dark-700', 'text-gray-300');
+                activeBtn.classList.add('bg-gold-500', 'text-black');
+            }
+
+            // Show/hide grid items based on category
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox Modal Functions
+        function openLightbox(imageSrc, captionText) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            lightboxImg.src = imageSrc;
+            lightboxCaption.textContent = captionText;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Contact Form to WhatsApp Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const service = document.getElementById('form-service').value;
+            const location = document.getElementById('form-location').value;
+            const details = document.getElementById('form-details').value;
+
+            let textMessage = `Hello SSR Structure Masters,%0A%0AI would like to request a quotation.%0A%0A- *Name:* ${encodeURIComponent(name)}%0A- *Service Required:* ${encodeURIComponent(service)}`;
+            
+            if (location) {
+                textMessage += `%0A- *Location:* ${encodeURIComponent(location)}`;
+            }
+            if (details) {
+                textMessage += `%0A- *Project Details:* ${encodeURIComponent(details)}`;
+            }
+
+            window.open(`https://wa.me/27792851517?text=${textMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>
